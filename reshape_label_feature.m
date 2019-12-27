@@ -1,4 +1,4 @@
-function [d,c]=reshape_label_feature(D,TRIG,cl,MODE1,t0,MODE)
+function [d,c]=reshape_label_feature(D,TRIG,cl,MODE1)
 % D 	data, each row is one time point
 % TRIG	trigger time points
 % Class class information
