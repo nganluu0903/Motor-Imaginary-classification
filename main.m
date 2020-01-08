@@ -23,8 +23,8 @@ for k = 1:9
     % Feature selection: Mutual information (a feature scoring method)
       [F_MI,W_MI] = MI(features,labels,3);
       %Choose 1st-15th feat based on descending weight
-      features=features(:,F_MI(1:30)); 
-      featuresE=featuresE(:,F_MI(1:30));
+      features=features(:,F_MI(1:15)); 
+      featuresE=featuresE(:,F_MI(1:15));
 %Classification ==================== %  
       rng('default') % For reproducibility
 %       lda = fitcdiscr(features,labels,...
