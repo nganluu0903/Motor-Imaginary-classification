@@ -18,8 +18,8 @@ function [s,feat, HDR, features, labels, MODE]=process_feature(s,HDR)
     csp_matrix = multiclass_csp(s,HDR);    
     s=s*csp_matrix;
     % Feature extraction ====================%
-    bands=[4,8;8,12;12,16;16,20;20,24;24,28;28,30];
-%     bands = [8,14;19,24;24,30]; % define frequency bands 
+    %bands=[4,8;8,12;12,16;16,20;20,24;24,28;28,30];
+    bands = [8,14;19,24;24,30]; % define frequency bands 
     win = 2; 	% length of smoothing window in seconds
     feat = bandpower(s, HDR.SampleRate, bands, win);
     TrialLen = 6; % seconds
