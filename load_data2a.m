@@ -1,4 +1,4 @@
-
+%Load all data in folder
 filename = dir('BCICIV_2a_gdf/*T*.gdf');
 cd BCICIV_2a_gdf;
 for j = 1:length(filename)
@@ -7,6 +7,7 @@ for j = 1:length(filename)
     type=HDR.EVENT.TYP;
     pos=HDR.EVENT.POS;
     dur=HDR.EVENT.DUR;
+ %Extract events
     iv_c1=1; iv_c2=1; iv_c3=1; iv_c4=1;
     for i=1:size(type,1)
         if type(i,1)==769
